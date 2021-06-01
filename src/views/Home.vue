@@ -14,6 +14,6 @@ export default {
     components: {
         NavHeader,
         NavFooter
-    }
+    },
 }
 </script>
