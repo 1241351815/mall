@@ -8,7 +8,7 @@ import Order from './../views/order'
 import OrderList from './../views/orderList'
 import OrderConfirm from './../views/orderConfirm'
 import OrderPay from './../views/orderPay'
-import OrderAlipay from './../views/orderAlipay'
+import alipay from './../views/alipay'
 import Cart from './../views/cart'
 
 Vue.use(Router)
@@ -21,10 +21,10 @@ export default new Router({
   // base: process.env.BASE_URL,
   routes: [
     {
-      path:'/',
-      name:'home',
-      component:Home,
-      redirect:'/index',
+      path: '/',
+      name: 'home',
+      component: Home,
+      redirect: '/index',
       children: [
         {
           path: '/index',
@@ -33,12 +33,12 @@ export default new Router({
         }, {
           path: '/product/:id',
           name: 'product',
-          componten: Product
+          component: Product,
         }, 
         {
           path: '/detail/:id',
           name: 'detail',
-          componten: Detail
+          component: Detail,
         }
       ]
     },
@@ -48,24 +48,24 @@ export default new Router({
       component: Order,
       children: [
         {
-          path: '/list',
-          name: 'order-list',
-          componten: OrderList
+          path: 'list',
+          name: 'orderList',
+          component: OrderList,
         },
         {
-          path: '/confirm',
-          name: 'order-confirm',
-          componten: OrderConfirm
+          path: 'confirm',
+          name: 'orderConfirm',
+          component: OrderConfirm,
         },
         {
-          path: '/pay',
-          name: 'order-pay',
-          componten: OrderPay
+          path: 'pay',
+          name: 'orderPay',
+          component: OrderPay,
         },
         {
-          path: '/Alipay',
-          name: 'order-Alipay',
-          componten: OrderAlipay
+          path: 'alipay',
+          name: 'alipay',
+          component: alipay,
         }
       ]
     },

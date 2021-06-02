@@ -4,10 +4,15 @@
   </div>
 </template>
 <script>
+import Storage from './storage'
 export default {
   name: 'app',
   components: {
 
+  },
+  mounted() {
+    Storage.setItem('age',"30","user")
+     Storage.clear("name","user")
   }
 }
 </script>
@@ -22,3 +27,4 @@ export default {
   margin-top: 60px;
 }
 </style>
+{"user":{"name":"tt","age":"30"}}
